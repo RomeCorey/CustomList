@@ -8,5 +8,9 @@ namespace CustomList
 {
     class CustomList
     {
+        public ListForTesting()
+        {
+            //Not linked properly??
+        }
     }
 }
