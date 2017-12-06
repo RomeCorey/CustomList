@@ -15,7 +15,7 @@ namespace CustomListTester
         [TestMethod]
         public void TestIndex_Add()
         {
-            ListForTesting<int> list = new ListForTesting<int>();
+            CustomList<int> list = new CustomList<int>();
             int expectedInt = 2;
             list.Add(99);
             list.Add(2);
@@ -27,7 +27,7 @@ namespace CustomListTester
         public void AddStringToList()
         {
 
-            ListForTesting<string> list = new ListForTesting<string>();
+            CustomList<string> list = new CustomList<string>();
             string expectedString = "HelloWorld";
 
             list.Add("HelloWorld");
@@ -40,19 +40,19 @@ namespace CustomListTester
         [TestMethod]
         public void ListCountTest()
         {
-            ListForTesting<int> list = new ListForTesting<int>() { 1, 2, 3 };
+            CustomList<int> list = new CustomList<int>() { 1, 2, 3 };
             int expectedCount = 2;
             
             int actualCount = list.Count;
             
-            Assert.AreEqual(expectedCount, actualResult);        
+            Assert.AreEqual(expectedCount, actualCount);        
         }
 
         [TestMethod]
 
         public void RemoveInt()
         {
-            ListForTesting<int> list = new ListForTesting<int>() { 1, 2, 3 };
+            CustomList<int> list = new CustomList<int>() { 1, 2, 3 };
             int expectedRemovedInt = 2;
 
             int actualRemoved = list.Remove[1];
@@ -65,7 +65,7 @@ namespace CustomListTester
 
         public RemoveString()
         {
-            ListForTesting<string> list = new ListForTesting<string>() { "Hello", "World", "Goodbye" };
+            CustomList<string> list = new CustomList<string>() { "Hello", "World", "Goodbye" };
             string expectedRemovedString = "World";
 
             string actualRemovedString = list.Remove[1];
@@ -73,6 +73,8 @@ namespace CustomListTester
             Assert.AreEqual(actualRemovedString, expectedRemovedString);
 
         }
+
+
 
 
 
