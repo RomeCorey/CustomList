@@ -7,16 +7,36 @@ namespace CustomListTester
     public class UnitTest1
     {
         [TestMethod]
-
-        
-        public void TestMethod1()
+        public void TestIndex()
         {
-           //Test for adding to end of "list"
+            ListForTesting<int> list = new ListForTesting<int>();
+            int expectedInt = 2;
+            list.Add(99);
+            list.Add(2);
 
-            //Test for checking the length of the list after an addition
-
-            //Test
-           
+            Assert.AreEqual(expectedInt, list[1]);
         }
+
+        public void AddStringToList()
+        {
+            
+            ListForTesting<string> list = new ListForTesting<string>();
+            string expectedString = "HelloWorld";
+            
+            list.Add("HelloWorld");
+            list.Add("Goodbye");
+
+
+        public void ListCountTest()
+        {
+            ListForTesting<int> list = new ListForTesting<int>() { 1, 2, 3 };
+            int expectedCount = 3;
+            
+            int actualResult = list.Count;
+            
+            Assert.AreEqual(expectedCount, actualResult);        
+        }
+
+
     }
 }
