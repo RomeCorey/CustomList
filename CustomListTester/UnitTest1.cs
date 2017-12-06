@@ -19,18 +19,22 @@ namespace CustomListTester
 
         public void AddStringToList()
         {
-            
+
             ListForTesting<string> list = new ListForTesting<string>();
             string expectedString = "HelloWorld";
-            
+
             list.Add("HelloWorld");
             list.Add("Goodbye");
+
+            Assert.AreSame(expectedString, list[0]);
+
+        }
 
 
         public void ListCountTest()
         {
             ListForTesting<int> list = new ListForTesting<int>() { 1, 2, 3 };
-            int expectedCount = 3;
+            int expectedCount = 2;
             
             int actualResult = list.Count;
             
