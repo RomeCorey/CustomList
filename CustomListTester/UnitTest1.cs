@@ -61,6 +61,20 @@ namespace CustomListTester
 
         }
 
+        [TestMethod]
+
+        public RemoveString()
+        {
+            ListForTesting<string> list = new ListForTesting<string>() { "Hello", "World", "Goodbye" };
+            string expectedRemovedString = "World";
+
+            string actualRemovedString = list.Remove[1];
+
+            Assert.AreEqual(actualRemovedString, expectedRemovedString);
+
+        }
+
+
 
 
 
