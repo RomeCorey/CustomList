@@ -43,7 +43,7 @@ namespace CustomListTester
             float expectedFloat = 3.14f;
 
             list.Add(3.14f);
-
+            
             Assert.AreEqual(expectedFloat, list[0]);
         }
 
