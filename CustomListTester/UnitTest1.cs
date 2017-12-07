@@ -48,6 +48,21 @@ namespace CustomListTester
         }
 
         [TestMethod]
+        public void AddNegativeNumberToList()
+        {
+            CustomList<int> list = new CustomList<int>();
+            {
+                int expectedNegative = -99;
+
+                list.Add(23);
+                list.Add(32);
+                list.Add(-99);
+
+                Assert.AreEqual(expectedNegative, list[2]);
+            }
+        }
+
+        [TestMethod]
         public void ListCountTest()
         {
             CustomList<int> list = new CustomList<int>() { 1, 2, 3 };
@@ -81,6 +96,19 @@ namespace CustomListTester
             string actualRemovedString = list.Remove[1];
 
             Assert.AreEqual(actualRemovedString, expectedRemovedString);
+
+        }
+
+        [TestMethod]
+
+        public RemoveFloat() 
+        {
+            CustomList<float> list = new CustomList<float>() { 1, 3.14f, 44 };
+            float expectedRemovedFloat = 3.14f;
+
+            float actualRemovedFloat = list.Remove[3.14f];
+
+            Assert.AreEqual(actualRemovedFloat, expectedRemovedFloat);
 
         }
 
