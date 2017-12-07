@@ -66,7 +66,7 @@ namespace CustomListTester
         public void ListCountTest()
         {
             CustomList<int> list = new CustomList<int>() { 1, 2, 3 };
-            int expectedCount = 2;
+            int expectedCount = 3;
             
             int actualCount = list.Count;
             
@@ -77,10 +77,10 @@ namespace CustomListTester
 
         public void RemoveInt()
         {
-            CustomList<int> list = new CustomList<int>() { 1, 2, 3 };
-            int expectedRemovedInt = 2;
+            CustomList<int> list = new CustomList<int>() { 10, 20, 30 };
+            int expectedRemovedInt = 20;
 
-            int actualRemoved = list.Remove[1];
+            int actualRemoved = list.Remove(10);
 
             Assert.AreEqual(actualRemoved, expectedRemovedInt);
 
@@ -93,7 +93,7 @@ namespace CustomListTester
             CustomList<string> list = new CustomList<string>() { "Hello", "World", "Goodbye" };
             string expectedRemovedString = "World";
 
-            string actualRemovedString = list.Remove[1];
+            string actualRemovedString = list.Remove("Hello");
 
             Assert.AreEqual(actualRemovedString, expectedRemovedString);
 
@@ -106,7 +106,7 @@ namespace CustomListTester
             CustomList<float> list = new CustomList<float>() { 1, 3.14f, 44 };
             float expectedRemovedFloat = 3.14f;
 
-            float actualRemovedFloat = list.Remove[3.14f];
+            float actualRemovedFloat = list.Remove(3.14f);
 
             Assert.AreEqual(actualRemovedFloat, expectedRemovedFloat);
 
