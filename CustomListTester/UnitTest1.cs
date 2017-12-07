@@ -37,6 +37,16 @@ namespace CustomListTester
 
         }
 
+        public void AddFloatToList()
+        {
+            CustomList<float> list = new CustomList<float>();
+            float expectedFloat = 3.14f;
+
+            list.Add(3.14f);
+
+            Assert.AreEqual(expectedFloat, list[0]);
+        }
+
         [TestMethod]
         public void ListCountTest()
         {
