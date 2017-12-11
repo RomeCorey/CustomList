@@ -15,12 +15,16 @@ namespace CustomListTester
         [TestMethod]
         public void TestIndex_Add()
         {
+            //Arrange
             CustomList<int> list = new CustomList<int>();
             int expectedInt = 2;
+
+            //act
             list.Add(99);
             list.Add(2);
 
-            Assert.AreEqual(expectedInt, list[1]);
+            //assert
+            Assert.AreEqual(expectedInt,  list[1];
         }
 
         [TestMethod]
@@ -52,11 +56,11 @@ namespace CustomListTester
         {
             CustomList<int> list = new CustomList<int>();
             {
-                int expectedNegative = -99;
+                int expectedNegative = -1;
 
-                list.Add(23);
-                list.Add(32);
-                list.Add(-99);
+                list.Add(1);
+                list.Add(2);
+                list.Add(-1);
 
                 Assert.AreEqual(expectedNegative, list[2]);
             }
@@ -78,40 +82,40 @@ namespace CustomListTester
         public void RemoveInt()
         {
             CustomList<int> list = new CustomList<int>() { 10, 20, 30 };
-            int expectedRemovedInt = 20;
+            int expectedCount = 2;
 
-            int actualRemoved = list.Remove(10);
+            list.Remove(10);
 
-            Assert.AreEqual(actualRemoved, expectedRemovedInt);
+            Assert.AreEqual(list.Count, expectedCount);
 
         }
 
         [TestMethod]
 
-        public RemoveString()
+        public void RemoveString()
         {
             CustomList<string> list = new CustomList<string>() { "Hello", "World", "Goodbye" };
-            string expectedRemovedString = "World";
+            string expectedCount = 2;
 
-            string actualRemovedString = list.Remove("Hello");
+            list.Remove("Hello");
 
-            Assert.AreEqual(actualRemovedString, expectedRemovedString);
+            Assert.AreEqual(list.Count, expectedCount);
 
         }
 
         [TestMethod]
 
-        public RemoveFloat() 
+        public void RemoveFloat() 
         {
             CustomList<float> list = new CustomList<float>() { 1, 3.14f, 44 };
-            float expectedRemovedFloat = 3.14f;
+            float expectedCount = 3.14f;
 
-            float actualRemovedFloat = list.Remove(3.14f);
+            list.Remove(3.14f); 
 
-            Assert.AreEqual(actualRemovedFloat, expectedRemovedFloat);
+            Assert.AreEqual(list.Count, expectedFloat);
 
         }
-
+        
 
 
 
