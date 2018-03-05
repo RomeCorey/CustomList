@@ -10,7 +10,12 @@ namespace CustomList
     {
         static void Main(string[] args)
         {
-            
+            CustomList<int> numbers1 = new CustomList<int>();
+            CustomList<int> numbers2 = new CustomList<int>();
+
+            numbers2.Add(4);
+            numbers2[0] = 7;
+
         }
     }
 }

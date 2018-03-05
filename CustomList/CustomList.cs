@@ -29,7 +29,7 @@ namespace CustomList
             }
         }
 
-        public int Index
+        public int Capacity
         {
             get
             {
@@ -41,8 +41,21 @@ namespace CustomList
             }
         }
 
+        public T this[int i]
+        {
+            get
+            {
+                return ArrayOne[i];
+            }
+            set
+            {
+                ArrayOne[i] = value;
+            }
+        }
+
         public void Add(T item)
         {
+            Console.WriteLine(this.Count);
             if(Count == capacity)
             {
                 GetAddArray();

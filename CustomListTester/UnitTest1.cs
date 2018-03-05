@@ -22,9 +22,8 @@ namespace CustomListTester
             //act
             list.Add(99);
             list.Add(2);
-
             //assert
-            Assert.AreEqual(expectedInt,  list[1];
+            Assert.AreEqual(expectedInt,  list[1]);
         }
 
         [TestMethod]
@@ -95,7 +94,7 @@ namespace CustomListTester
         public void RemoveString()
         {
             CustomList<string> list = new CustomList<string>() { "Hello", "World", "Goodbye" };
-            string expectedCount = 2;
+            int expectedCount = 2;
 
             list.Remove("Hello");
 
@@ -108,7 +107,7 @@ namespace CustomListTester
         public void RemoveFloat() 
         {
             CustomList<float> list = new CustomList<float>() { 1, 3.14f, 44 };
-            float expectedCount = 3.14f;
+            int expectedFloat = 2;
 
             list.Remove(3.14f); 
 
@@ -116,6 +115,7 @@ namespace CustomListTester
 
         }
         
+
 
 
 
